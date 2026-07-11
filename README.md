@@ -1,4 +1,4 @@
-# 🎯 Vanguard Suite | Customer Insights Engine
+#  Vanguard Suite | Customer Insights Engine
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat-square&logo=fastapi)](https://fastapi.tiangolo.com)
 [![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react)](https://reactjs.org)
