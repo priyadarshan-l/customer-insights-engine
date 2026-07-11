@@ -227,12 +227,3 @@ The engine generates 5 explainability visualizations exported to `src/assets/`:
 5. **Force Plot**: Highlights positive and negative forces driving predictions.
 
 ---
-
-## 💼 Placement Portfolio Notes
-
-This project is structured specifically to showcase modern, production-grade software engineering practices in ML:
-1. **Custom Scikit-Learn Estimators**: Built custom OOP-compliant preprocessing transformers (`FeatureEngineer`, `CampaignScoreAdder`, `SegmentEncoder`) that inherit from `BaseEstimator` and `TransformerMixin` for seamless pipeline integration.
-2. **Robust Testing Suite**: Contains 15 unit and integration tests using `pytest` and FastAPI's `TestClient` to verify mathematics, API error handling (400 Bad Requests), and endpoint outputs.
-3. **Clean Code & Configuration**: Unified constants inside `backend/config.py` rather than hardcoding file paths, and configured Matplotlib to run in headless non-interactive mode (`'Agg'`) to prevent server blocking.
-4. **Class Imbalance & SMOTE**: Applied synthetic minority over-sampling (`SMOTE`) inside the training routine to handle the heavily imbalanced response class.
-5. **Modern API Architecture**: Integrated GCP Storage client logic alongside local fallbacks, implementing robust CORS policies and custom global exception handling.
