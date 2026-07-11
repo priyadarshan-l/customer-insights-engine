@@ -1,0 +1,50 @@
+.git
+.gitignore
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+frontend/.env.*.local
+
+# Python/Backend/ML
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.env
+.venv
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Project Specific
+notebooks/
+.vscode/
+
+# Ignore artifacts output
+# If models/ is generated strictly in dev, you might ignore it, 
+# but usually we want to bundle the models in our production image.
+# Do NOT ignore models/ or data/ entirely, wait we DO need them inside.
+# But we might ignore specific huge datasets if not required for inference.
+# ml/assets/ can be ignored if it's just plots.
+ml/assets/

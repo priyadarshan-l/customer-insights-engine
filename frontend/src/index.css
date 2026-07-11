@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Updated to professional corporate color palette */
+    --color-navy-dark: #0a1929;
+    --color-navy: #132f4c;
+    --color-navy-light: #1a4565;
+    --color-slate: #1e293b;
+    --color-slate-light: #334155;
+
+    --color-gold: #d4af37;
+    --color-gold-light: #f4e4b0;
+    --color-gold-dark: #b8941f;
+
+    --color-emerald: #10b981;
+    --color-amber: #f59e0b;
+    --color-red: #ef4444;
+
+    --color-gray-50: #f8fafc;
+    --color-gray-100: #f1f5f9;
+    --color-gray-200: #e2e8f0;
+    --color-gray-300: #cbd5e1;
+    --color-gray-400: #94a3b8;
+    --color-gray-500: #64748b;
+    --color-gray-600: #475569;
+    --color-gray-700: #334155;
+    --color-gray-800: #1e293b;
+    --color-gray-900: #0f172a;
+
+    /* Semantic Colors */
+    --color-background: var(--color-navy-dark);
+    --color-surface: var(--color-navy);
+    --color-surface-light: var(--color-navy-light);
+    --color-sidebar: var(--color-slate);
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #cbd5e1;
+    --color-text-muted: #94a3b8;
+    --color-border: rgba(212, 175, 55, 0.15);
+
+    --color-urgent: var(--color-red);
+    --color-monitor: var(--color-amber);
+    --color-stable: var(--color-emerald);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--color-background);
+    color: var(--color-text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+}
+
+@layer components {
+  /* Enhanced glass-morphism with better corporate feel */
+  .glass {
+    background: rgba(19, 47, 76, 0.7);
+    backdrop-filter: blur(24px);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .glass-light {
+    background: rgba(26, 69, 101, 0.5);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--color-border);
+  }
+
+  /* Professional card styling */
+  .card-corporate {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .card-corporate:hover {
+    border-color: var(--color-gold);
+    box-shadow: 0 8px 32px rgba(212, 175, 55, 0.1);
+    transform: translateY(-2px);
+  }
+}
+
+@layer utilities {
+  /* Smooth scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-navy);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-gold);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gold-light);
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(212, 175, 55, 0.2) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  /* Adding smooth transitions and enhanced animations */
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @keyframes pulse-glow {
+    0%,
+    100% {
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
+    }
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.5s ease-out;
+  }
+
+  /* Enhanced glass morphism with depth */
+  .glass-premium {
+    background: linear-gradient(135deg, rgba(19, 47, 76, 0.8) 0%, rgba(26, 69, 101, 0.6) 100%);
+    backdrop-filter: blur(32px) saturate(180%);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37), inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+  }
+
+  /* Futuristic grid background */
+  .grid-background {
+    background-image: linear-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(212, 175, 55, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+}

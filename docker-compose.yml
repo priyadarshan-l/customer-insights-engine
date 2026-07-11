@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend.Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+    restart: unless-stopped
+    volumes:
+      # Optional: mount data directory for persistent data if needed
+      - ./data:/app/data
+      # Optional: mount models directory to load new models without rebuilding
+      - ./models:/app/models
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend.Dockerfile
+      args:
+        # Pass the backend API route if different. 
+        # When using docker-compose, this can remain localhost if accessed strictly from browser on the same host,
+        # but if deploying to cloud, this should be the public IP or domain of the backend service.
+        - VITE_API_URL=http://localhost:8000
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
