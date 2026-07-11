@@ -110,7 +110,7 @@ Customer Insights Engine/
 
 ---
 
-## 🚀 Setup & Execution
+##  Setup & Execution
 
 Ensure you have Python 3.8+ and Node.js 18+ installed on your machine.
 
@@ -181,7 +181,7 @@ pytest tests/
 
 ---
 
-## 🎯 API Endpoints
+##  API Endpoints
 
 | Method | Endpoint | Description | Request Schema |
 |:---|:---|:---|:---|
@@ -203,7 +203,7 @@ SCIE groups customers into one of three risk categories based on their output pr
 
 ---
 
-## 🧠 Machine Learning Details
+##  Machine Learning Details
 
 ### Stage 1: Customer Segmentation (Unsupervised)
 - **Algorithm**: K-Means Clustering (scaled using `StandardScaler`).
